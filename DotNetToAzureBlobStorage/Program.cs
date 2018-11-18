@@ -9,9 +9,11 @@ namespace DotNetToAzureBlobStorage
 {
     class Program
     {
+        private static string connectionString;
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //connectionString = ConfigurationManager.AppSettings.Get("StorageConnectionString");
+            //CloudStorageContainerreference:
             AzureBlobWork().GetAwaiter().GetResult();
         }
 
@@ -59,12 +61,23 @@ namespace DotNetToAzureBlobStorage
                 Console.WriteLine("Downloading file from blob Azure Storage");
                 var destinationFile = sourceFile.Replace(".txt", "_Downloaded.txt");
                 await cloudBlockBlob.DownloadToFileAsync(destinationFile, FileMode.Create);
+
+                //Copy Blob files.
+                CopyBlobAsync(cloudBlobContainer, localFile);
             }
             else
             {
                 Console.WriteLine("Not able to connect to Azure Storage");
             }
             Console.WriteLine("Blob work completed");
+        }
+
+        static void CopyBlobAsync(CloudBlobContainer cloudBlobContainer, string fileName)
+        {
+            //put the blob name, which you want to copy.
+            CloudBlockBlob cloudBlockBlob = cloudBlobContainer.GetBlockBlobReference(fileName);
+            CloudBlockBlob cloudBlockBlob_copied = cloudBlobContainer.GetBlockBlobReference($"{Path.GetFileNameWithoutExtension(fileName)}_copied.txt");
+            cloudBlockBlob_copied.StartCopyAsync(cloudBlockBlob);
         }
     }
 }
