@@ -1,2 +1,6 @@
 ./bin
 ./obj
+AzureTable/bin
+AzureTable/obj
+AzureTable.sln
+.vs/*
