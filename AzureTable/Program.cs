@@ -84,6 +84,7 @@ namespace AzureTable
             var cloudTableClient = cloudStorageAccount.CreateCloudTableClient();
             var cloudTableReference = cloudTableClient.GetTableReference("MyFirstTableStorage");
             TableQuery<BlogEntity> tableQuery = new TableQuery<BlogEntity>();
+            //TableQuery<BlogEntity> tableQuery = new TableQuery<BlogEntity>().Take(2);
             var results = await cloudTableReference.ExecuteQuerySegmentedAsync<BlogEntity>(tableQuery, null);
             foreach (var result in results)
             {
