@@ -4,3 +4,7 @@ AzureTable/bin
 AzureTable/obj
 AzureTable.sln
 .vs/*
+AzureQueue/AzureQueue/bin
+AzureQueue/AzureQueue/obj
+AzureQueue.sln
+AzureQueue/.vs/*
