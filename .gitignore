@@ -8,3 +8,7 @@ AzureQueue/AzureQueue/bin
 AzureQueue/AzureQueue/obj
 AzureQueue.sln
 AzureQueue/.vs/*
+AzureCORS/AzureCORS/bin
+AzureCORS/AzureCORS/obj
+AzureCORS.sln
+AzureCORS/.vs/*
