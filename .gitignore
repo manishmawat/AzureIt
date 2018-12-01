@@ -12,3 +12,7 @@ AzureCORS/AzureCORS/bin
 AzureCORS/AzureCORS/obj
 AzureCORS.sln
 AzureCORS/.vs/*
+AzureServiceBusQueueMessaging/AzureServiceBusQueueMessaging/bin
+AzureServiceBusQueueMessaging/AzureServiceBusQueueMessaging/obj
+AzureServiceBusQueueMessaging.sln
+AzureServiceBusQueueMessaging/.vs/*
