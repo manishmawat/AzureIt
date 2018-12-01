@@ -1,18 +1,17 @@
 ﻿using System;
 using Microsoft.Azure.ServiceBus;
-using AzureServiceBusQueueMessaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace AzureServiceBusQueueMessaging
+namespace AzureServiceBusQueueTopicMessaging
 {
     class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            var conn = "Endpoint=sb://mytestservicebus11.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=rDU0P7qDvl29JKSsXiTNrw0+o0uvGtOllFb/06oth4I=";
+            var conn = "";
             var queueName = "myservicebusqueue";
 
             IQueueClient queueClient = new QueueClient(conn, queueName);
