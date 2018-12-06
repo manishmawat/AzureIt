@@ -16,3 +16,6 @@ AzureServiceBusQueueMessaging/AzureServiceBusQueueMessaging/bin
 AzureServiceBusQueueMessaging/AzureServiceBusQueueMessaging/obj
 AzureServiceBusQueueMessaging.sln
 AzureServiceBusQueueMessaging/.vs/*
+cosmosdb-module/bin
+cosmosdb-module/obj
+cosmosdb-module/.vscode
